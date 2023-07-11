@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 
 // Creando la estructura de la colección
-const userSchema = mongoose.Schema({
+const userSchema = new mongoose.Schema({
   username: {
     type: String,
     required: true,
@@ -17,6 +17,8 @@ const userSchema = mongoose.Schema({
     type: String,
     required: [true, 'Password is required'],
   }
+}, {
+  timestamps: true
 })
 
 // Creando el modelo User
