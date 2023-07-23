@@ -37,7 +37,7 @@ const LoginPage = () => {
           className='w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2'
           placeholder='Email'/>
           {
-            errors.email && <span className='text-red-500'>Email is required</span>
+            errors.email && <p className='text-red-500'>Email is required</p>
           }
           <input
           type="password"
@@ -45,9 +45,12 @@ const LoginPage = () => {
           className='w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2'
           placeholder='Password'/>
           {
-            errors.password && <span className='text-red-500'>Password is required</span>
+            errors.password && <p className='text-red-500'>Password is required</p>
           }
-          <button type="submit">Login</button>
+          <button
+          type="submit"
+          className='bg-sky-500 text-white px-4 py-2 rounded-md my-2'
+          >Login</button>
         </form>
         <p className='flex gap-x-2 justify-between'>
           Don&apos;t have an account? <Link to='/register' className='text-sky-500'>Register</Link>
